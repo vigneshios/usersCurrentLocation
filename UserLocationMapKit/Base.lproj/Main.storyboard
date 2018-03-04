@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Get User LocationVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GetUserLocationVC" customModule="UserLocationMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqU-hu-gSr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="VvZ-Hq-i1J"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b3o-VS-n2t">
+                                <rect key="frame" x="0.0" y="77" width="375" height="590"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b3o-VS-n2t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5fL-lX-Ne0"/>
+                            <constraint firstItem="b3o-VS-n2t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C1D-Ue-LAv"/>
+                            <constraint firstItem="eqU-hu-gSr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C1h-Tw-f2S"/>
+                            <constraint firstItem="eqU-hu-gSr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IyR-Pc-zhr"/>
+                            <constraint firstItem="eqU-hu-gSr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cyv-dd-xiu"/>
+                            <constraint firstItem="b3o-VS-n2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eDk-3G-vAy"/>
+                            <constraint firstItem="b3o-VS-n2t" firstAttribute="top" secondItem="eqU-hu-gSr" secondAttribute="bottom" id="mAV-34-qkt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="b3o-VS-n2t" id="Rwm-gR-KTT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
